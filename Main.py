@@ -15,7 +15,8 @@ st.markdown('''
 # Production Facilities Design
 ## Separators Design
 #### Supervised by: Eng. Mohammed Hussain
+#### Done by: Ahmed Zuhair
             ''')
-st.link_button("Done by Ahmed Zuhair", url='https://www.linkedin.com/in/ahmed-zuhair/')
+
 
 
