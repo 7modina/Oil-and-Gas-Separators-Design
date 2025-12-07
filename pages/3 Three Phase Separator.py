@@ -81,8 +81,10 @@ dmin_water = (6690*Qo*mu_o/(deltaSG*dm_water**2))**(1/2)
 
 def generate_vertical_diameter(n, count=25):
 
-    start = n if n % 4 == 0 else int(n + (4 - n % 4))
-    
+    if n < 24:
+        start = n if n % 4 == 0 else int(n + (4 - n % 4))
+    else:
+        start = 24
     result = []
     current = start
 
@@ -180,4 +182,5 @@ with Horizontal:
     
 
     st.dataframe(Horizontal_design_data.iloc[values[0]:values[1]+1].style.apply(highlight, axis=1), hide_index=True)
+
 
