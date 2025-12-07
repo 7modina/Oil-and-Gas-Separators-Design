@@ -166,8 +166,8 @@ with Horizontal:
     AwA = 0.5*Qw*tr_w/(tr_o*Qo+tr_w*Qw)
     beta = find_beta(AwA)
     dmax_o = homax/beta
-    dmax_w = hwmax/beta
-    dmax = min([dmax_o, dmax_w])
+    # dmax_w = hwmax/beta
+    dmax = dmax_o
     LD = 420*Qg*To_R*z/Po*(rho_l/(rho_l-rho_g)*Cd/dm_liquid)**(1/2)
     dsquared_L = 1.42*(tr_o*Qo+tr_w*Qw)
 
@@ -180,3 +180,4 @@ with Horizontal:
     
 
     st.dataframe(Horizontal_design_data.iloc[values[0]:values[1]+1].style.apply(highlight, axis=1), hide_index=True)
+
