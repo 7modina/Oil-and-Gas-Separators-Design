@@ -98,7 +98,7 @@ with Vertical:
 with Horizontal:
     st.write('Horizontal Design')
 
-    LD = 420*Qg*To_R*z/Po*(rho_l/(rho_l-rho_g)*Cd/dm_liquid)**(1/2)
+    LD = 420*Qg*To_R*z/Po*(rho_g/(rho_l-rho_g)*Cd/dm_liquid)**(1/2)
     dsquared_L = tr*Ql/0.7
     Horizontal_design_data = pd.DataFrame(columns=["Diameter (in)", "Leff (gas) (ft)", "Leff (liquid) (ft)", "Lss (ft)", "SR"])
     Horizontal_design_data["Diameter (in)"] = diameter_list
@@ -109,3 +109,4 @@ with Horizontal:
 
 
     st.dataframe(Horizontal_design_data.iloc[values[0]:values[1]+1].style.apply(highlight, axis=1), hide_index=True)
+
